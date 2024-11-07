@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="background-style"></div>
+    <div id="content-wrapper">
+      <header>
+        <h1 id="title">Our Services Survey Form</h1>
+        <p id="description">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </header>
+      <main>
+        <form id="survey-form" action="" method="GET">
+          <fieldset>
+            <label for="name" id="name-label"
+              >Name
+              <input
+                id="name"
+                name="full-name"
+                type="text"
+                placeholder="e.g. John Wick"
+                required
+            /></label>
+            <label for="email" id="email-label"
+              >Email
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="example@gmail.com"
+                required
+            /></label>
+            <label for="number" id="number-label"
+              >Age <span class="notice">(optional)</span>
+              <input
+                id="number"
+                name="age"
+                type="number"
+                min="10"
+                max="99"
+                placeholder="e.g. 27"
+            /></label>
+          </fieldset>
+          <fieldset>
+            <label for="dropdown">
+              Which option best describes your current role?
+              <select name="position" id="dropdown" required>
+                <option value="">(Select current role)</option>
+                <option value="postion-student">Student</option>
+                <option value="postion-full-time-job">Full Time Job</option>
+                <option value="postion-full-time-learner">
+                  Full Time Learner
+                </option>
+                <option value="postion-prefer-not-to-say">
+                  Prefer not to say
+                </option>
+                <option value="postion-other">Other</option>
+              </select>
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Would you recommend us to a friend?</legend>
+            <label for="recommend-3" class="choice"
+              ><input
+                name="recommendation"
+                id="recommend-3"
+                value="recommend-3"
+                type="radio"
+                checked
+              />
+              Definitly</label
+            >
+            <label for="recommend-2" class="choice"
+              ><input
+                name="recommendation"
+                id="recommend-2"
+                value="recommend-2"
+                type="radio"
+              />
+              Maybe</label
+            >
+            <label for="recommend-1" class="choice"
+              ><input
+                name="recommendation"
+                id="recommend-1"
+                value="recommend-1"
+                type="radio"
+              />
+              Not Sure
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>
+              What would you like to see improved?
+              <span class="notice">(Check all that apply)</span>
+            </legend>
+            <label for="improve-front-end" class="choice"
+              ><input
+                name="improve-area"
+                id="improve-front-end"
+                value="improve-front-end"
+                type="checkbox"
+              />
+              Front-end Projects</label
+            >
+            <label for="improve-back-end" class="choice"
+              ><input
+                name="improve-area"
+                id="improve-back-end"
+                value="improve-back-end"
+                type="checkbox"
+              />
+              Back-end Projects
+            </label>
+            <label for="improve-uiux" class="choice"
+              ><input
+                name="improve-area"
+                id="improve-uiux"
+                value="improve-uiux"
+                type="checkbox"
+              />
+              UI/UX Projects
+            </label>
+            <label for="improve-mobile" class="choice"
+              ><input
+                name="improve-area"
+                id="improve-mobile"
+                value="improve-mobile"
+                type="checkbox"
+              />
+              Mobile Projects
+            </label>
+            <label for="improve-customer-support" class="choice"
+              ><input
+                name="improve-area"
+                id="improve-customer-support"
+                value="improve-customer-support"
+                type="checkbox"
+              />
+              Customer Support
+            </label>
+            <label for="improve-website" class="choice"
+              ><input
+                name="improve-area"
+                id="improve-website"
+                value="improve-website"
+                type="checkbox"
+              />
+              Our Website
+            </label>
+            <label for="improve-survey-form" class="choice"
+              ><input
+                name="improve-area"
+                id="improve-survey-form"
+                value="improve-survey-form"
+                type="checkbox"
+              />
+              Survey Form
+            </label>
+            <label for="improve-additional-services" class="choice"
+              ><input
+                name="improve-area"
+                id="improve-additional-services"
+                value="improve-additional-services"
+                type="checkbox"
+              />
+              Additional Services
+            </label>
+          </fieldset>
+          <fieldset>
+            <label for="comments"
+              >Any comments or suggestions?<textarea
+                name="comments"
+                id="comments"
+                rows="5"
+                placeholder="Hello! I would suggest..."
+              ></textarea>
+            </label>
+          </fieldset>
+          <fieldset>
+            <button id="submit" type="submit">Submit</button>
+          </fieldset>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

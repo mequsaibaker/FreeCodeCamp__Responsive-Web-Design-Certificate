@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#background-style {
+    background: url("https://asset.gallup.com/p/WORKPLACEV9CMS/49821ce7-b62a-4bcb-9013-0a21bed58ed5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+}
+
+#background-style::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(27, 27, 150, 0.75);
+}
+
+#content-wrapper {
+    margin: 0 auto;
+    max-width: 700px;
+    min-width: 200px;
+    padding: 40px 8px;
+}
+
+main {
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h1+p {
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* FORM */
+
+form {
+    background-color: rgba(27, 27, 50, 0.75);
+    padding: 20px 40px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+fieldset {
+    border: none;
+    margin: 20px 0;
+}
+
+span.notice {
+    font-weight: 200;
+    font-size: 0.9rem;
+}
+
+label {
+    margin: 6px 0;
+}
+
+label.choice {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+label,
+legend {
+    font-size: 1.125rem;
+    display: block;
+}
+
+input,
+select,
+option,
+button {
+    font-size: 0.9rem;
+}
+
+input,
+select,
+option,
+textarea {
+    color: black;
+}
+
+input,
+select,
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-top: 3px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: unset;
+}
+
+option[value=""] {
+    color: grey;
+}
+
+textarea {
+    font-size: 0.825rem;
+}
+
+button {
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(0, 170, 0);
+    padding: 8px 0;
+}
