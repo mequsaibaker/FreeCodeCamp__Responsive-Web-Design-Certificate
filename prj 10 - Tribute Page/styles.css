@@ -17,20 +17,37 @@
     --fs-4: clamp(1.8144rem, 1.7107rem + 0.5184vw, 2.3328rem);
     /* Step 5: 34.8365px → 44.7898px */
     --fs-5: clamp(2.1773rem, 2.0529rem + 0.6221vw, 2.7994rem);
+
+    /* Step -2: 5.3477px → 6.8757px */
+    --spacing--2: clamp(0.3342rem, 0.3151rem + 0.0955vw, 0.4297rem);
+    /* Step -1: 8.6527px → 11.1248px */
+    --spacing--1: clamp(0.5408rem, 0.5099rem + 0.1545vw, 0.6953rem);
+    /* Step 0: 14px → 18px */
+    --spacing-0: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
+    /* Step 1: 22.652px → 29.124px */
+    --spacing-1: clamp(1.4158rem, 1.3349rem + 0.4045vw, 1.8203rem);
+    /* Step 2: 36.6509px → 47.1226px */
+    --spacing-2: clamp(2.2907rem, 2.1598rem + 0.6545vw, 2.9452rem);
+    /* Step 3: 59.3012px → 76.2444px */
+    --spacing-3: clamp(3.7063rem, 3.4945rem + 1.059vw, 4.7653rem);
+    /* Step 4: 95.9494px → 123.3635px */
+    --spacing-4: clamp(5.9968rem, 5.6542rem + 1.7134vw, 7.7102rem);
+    /* Step 5: 155.2461px → 199.6021px */
+    --spacing-5: clamp(9.7029rem, 9.1484rem + 2.7723vw, 12.4751rem);
 }
 
 h1 {
     font-size: var(--fs-5);
     font-weight: 700;
     line-height: 1.1;
-    margin-bottom: var(--fs--2);
+    margin-bottom: var(--spacing--2);
 }
 
 h2 {
     font-size: var(--fs-2);
     font-weight: 600;
     line-height: 1.2;
-    margin-bottom: var(--fs--2);
+    margin-bottom: var(--spacing--2);
 }
 
 p {
@@ -42,12 +59,12 @@ blockquote {
     font-size: var(--fs-0);
     font-weight: 400;
     font-style: italic;
-    margin: var(--fs-5) var(--fs-2);
+    margin: var(--spacing-3) var(--spacing-1);
 }
 
 cite {
     display: block;
-    margin: var(--fs--2) 0;
+    margin: var(--spacing--1) 0;
 }
 
 .caption {
@@ -92,7 +109,7 @@ figure {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: var(--fs-0);
+    gap: var(--spacing--1);
 }
 
 img {
@@ -102,7 +119,8 @@ img {
 
 #tribute-info,
 #footer {
-    max-width: 600px;
+    /* Step 0: 600px → 800px */
+    max-width: clamp(37.5rem, 35rem + 12.5vw, 50rem);
     width: 100%;
 
 }
@@ -112,16 +130,16 @@ img {
 }
 
 #tribute-info h2 {
-    margin: var(--fs-5) 0;
+    margin: var(--spacing-3) 0;
     text-align: center;
 }
 
 #tribute-info li {
-    margin: var(--fs-0);
+    margin: var(--spacing-1);
 }
 
 #footer {
-    margin: var(--fs-5) auto;
+    margin: var(--spacing-2) auto;
 }
 
 #footer h2 {
