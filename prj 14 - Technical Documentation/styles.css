@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: var(--fs-0);
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    padding: var(--spacing-3);
+    display: flex;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f155;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+:root {
+    /* Step -2: 9.7222px → 9.0045px */
+    --fs--2: clamp(0.5628rem, 0.6166rem + -0.0449vw, 0.6076rem);
+    /* Step -1: 11.6667px → 12.003px */
+    --fs--1: clamp(0.7292rem, 0.725rem + 0.021vw, 0.7502rem);
+    /* Step 0: 14px → 16px */
+    --fs-0: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
+    /* Step 1: 16.8px → 21.328px */
+    --fs-1: clamp(1.05rem, 0.9934rem + 0.283vw, 1.333rem);
+    /* Step 2: 20.16px → 28.4302px */
+    --fs-2: clamp(1.26rem, 1.1566rem + 0.5169vw, 1.7769rem);
+    /* Step 3: 24.192px → 37.8975px */
+    --fs-3: clamp(1.512rem, 1.3407rem + 0.8566vw, 2.3686rem);
+    /* Step 4: 29.0304px → 50.5174px */
+    --fs-4: clamp(1.8144rem, 1.5458rem + 1.3429vw, 3.1573rem);
+    /* Step 5: 34.8365px → 67.3396px */
+    --fs-5: clamp(2.1773rem, 1.771rem + 2.0314vw, 4.2087rem);
+
+    /* Step -2: 3.0559px → 4.5838px */
+    --spacing--2: clamp(0.191rem, 0.1719rem + 0.0955vw, 0.2865rem);
+    /* Step -1: 4.9444px → 7.4166px */
+    --spacing--1: clamp(0.309rem, 0.2781rem + 0.1545vw, 0.4635rem);
+    /* Step 0: 8px → 12px */
+    --spacing-0: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
+    /* Step 1: 12.944px → 19.416px */
+    --spacing-1: clamp(0.809rem, 0.7281rem + 0.4045vw, 1.2135rem);
+    /* Step 2: 20.9434px → 31.4151px */
+    --spacing-2: clamp(1.309rem, 1.1781rem + 0.6545vw, 1.9634rem);
+    /* Step 3: 33.8864px → 50.8296px */
+    --spacing-3: clamp(2.1179rem, 1.9061rem + 1.059vw, 3.1769rem);
+    /* Step 4: 54.8282px → 82.2423px */
+    --spacing-4: clamp(3.4268rem, 3.0841rem + 1.7134vw, 5.1401rem);
+    /* Step 5: 88.712px → 133.0681px */
+    --spacing-5: clamp(5.5445rem, 4.9901rem + 2.7723vw, 8.3168rem);
+}
+
+h1 {
+    font-size: var(--fs-3);
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-1);
+}
+
+p {
+    font-size: var(--fs-0);
+    font-weight: 400;
+    line-height: 1.7;
+    margin: var(--spacing-1) 0;
+}
+
+
+
+/* navbar */
+
+nav {
+    flex: 0 0 clamp(15.625rem, 13.75rem + 9.375vw, 25rem);
+}
+
+nav div {
+    height: calc(100vh - var(--spacing-3) * 2);
+    overflow-Y: auto;
+    position: sticky;
+    top: var(--spacing-3);
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    font-size: var(--fs-0);
+    font-weight: 400;
+    line-height: 1.45;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+    padding: var(--spacing-0) var(--spacing-1);
+    border-bottom: 1px solid lightgray;
+    display: block;
+
+}
+
+nav a:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+
+/* main */
+
+main header {
+    font-size: var(--fs-2);
+    font-weight: 700;
+    line-height: 1.1;
+    margin: var(--spacing-3) 0 var(--spacing-1) 0;
+}
+
+
+
+main code {
+    font-family: "IBM Plex Mono", monospace;
+    background-color: whitesmoke;
+    font-size: var(--fs-0);
+    display: block;
+    padding: var(--spacing-1) var(--spacing-2);
+    width: 100%;
+    border-radius: var(--spacing-0);
+    margin: var(--spacing-0) var(--spacing-0) var(--spacing-2) var(--spacing-0);
+}
+
+
+main ul {
+    margin: var(--spacing-2) var(--spacing-2);
+}
+
+main ul p {
+    margin: var(--spacing-0) 0;
+}
+
+
+/* media queries */
+
+@media (min-width: 800px) {
+
+    main header:first-of-type {
+        margin-top: 0;
+    }
+
+    main {
+        padding-left: var(--spacing-3);
+        border-left: 1px solid grey;
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        flex-direction: column;
+    }
+
+    nav div {
+        height: 100%;
+    }
+}
