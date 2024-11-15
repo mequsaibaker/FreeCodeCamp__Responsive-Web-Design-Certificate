@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-align: center;
+}
+
+html {
+    font-size: var(--fs-0);
+}
+
+:root {
+    /* @link https://utopia.fyi/type/calculator?c=320,14,1.5,1920,18,1.618,5,2,1280&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    /* Step -2: 6.2222px → 6.8757px */
+    --fs--2: clamp(0.3889rem, 0.3807rem + 0.0408vw, 0.4297rem);
+    /* Step -1: 9.3333px → 11.1248px */
+    --fs--1: clamp(0.5833rem, 0.5609rem + 0.112vw, 0.6953rem);
+    /* Step 0: 14px → 18px */
+    --fs-0: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
+    /* Step 1: 21px → 29.124px */
+    --fs-1: clamp(1.3125rem, 1.211rem + 0.5078vw, 1.8203rem);
+    /* Step 2: 31.5px → 47.1226px */
+    --fs-2: clamp(1.9688rem, 1.7735rem + 0.9764vw, 2.9452rem);
+    /* Step 3: 47.25px → 76.2444px */
+    --fs-3: clamp(2.9531rem, 2.5907rem + 1.8122vw, 4.7653rem);
+    /* Step 4: 70.875px → 123.3635px */
+    --fs-4: clamp(4.4297rem, 3.7736rem + 3.2805vw, 7.7102rem);
+    /* Step 5: 106.3125px → 199.6021px */
+    --fs-5: clamp(6.6445rem, 5.4784rem + 5.8306vw, 12.4751rem);
+
+    /* @link https://utopia.fyi/type/calculator?c=320,10,1.5,1920,14,1.618,5,2,1280&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    /* Step -2: 4.4444px → 5.3477px */
+    --fs-sec--2: clamp(0.2778rem, 0.2665rem + 0.0565vw, 0.3342rem);
+    /* Step -1: 6.6667px → 8.6527px */
+    --fs-sec--1: clamp(0.4167rem, 0.3918rem + 0.1241vw, 0.5408rem);
+    /* Step 0: 10px → 14px */
+    --fs-sec-0: clamp(0.625rem, 0.575rem + 0.25vw, 0.875rem);
+    /* Step 1: 15px → 22.652px */
+    --fs-sec-1: clamp(0.9375rem, 0.8419rem + 0.4783vw, 1.4158rem);
+    /* Step 2: 22.5px → 36.6509px */
+    --fs-sec-2: clamp(1.4063rem, 1.2294rem + 0.8844vw, 2.2907rem);
+    /* Step 3: 33.75px → 59.3012px */
+    --fs-sec-3: clamp(2.1094rem, 1.79rem + 1.597vw, 3.7063rem);
+    /* Step 4: 50.625px → 95.9494px */
+    --fs-sec-4: clamp(3.1641rem, 2.5975rem + 2.8328vw, 5.9968rem);
+    /* Step 5: 75.9375px → 155.2461px */
+    --fs-sec-5: clamp(4.7461rem, 3.7547rem + 4.9568vw, 9.7029rem);
+
+    /* @link https://utopia.fyi/type/calculator?c=320,8,1.2,1920,10,1.333,8,2,1280&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    /* Step -2: 5.5556px → 5.6278px */
+    --spacing--2: clamp(0.3472rem, 0.3463rem + 0.0045vw, 0.3517rem);
+    /* Step -1: 6.6667px → 7.5019px */
+    --spacing--1: clamp(0.4167rem, 0.4062rem + 0.0522vw, 0.4689rem);
+    /* Step 0: 8px → 10px */
+    --spacing-0: clamp(0.5rem, 0.475rem + 0.125vw, 0.625rem);
+    /* Step 1: 9.6px → 13.33px */
+    --spacing-1: clamp(0.6rem, 0.5534rem + 0.2331vw, 0.8331rem);
+    /* Step 2: 11.52px → 17.7689px */
+    --spacing-2: clamp(0.72rem, 0.6419rem + 0.3906vw, 1.1106rem);
+    /* Step 3: 13.824px → 23.6859px */
+    --spacing-3: clamp(0.864rem, 0.7407rem + 0.6164vw, 1.4804rem);
+    /* Step 4: 16.5888px → 31.5733px */
+    --spacing-4: clamp(1.0368rem, 0.8495rem + 0.9365vw, 1.9733rem);
+    /* Step 5: 19.9066px → 42.0873px */
+    --spacing-5: clamp(1.2442rem, 0.9669rem + 1.3863vw, 2.6305rem);
+    /* Step 6: 23.8879px → 56.1023px */
+    --spacing-6: clamp(1.493rem, 1.0903rem + 2.0134vw, 3.5064rem);
+    /* Step 7: 28.6654px → 74.7844px */
+    --spacing-7: clamp(1.7916rem, 1.2151rem + 2.8824vw, 4.674rem);
+    /* Step 8: 34.3985px → 99.6876px */
+    --spacing-8: clamp(2.1499rem, 1.3338rem + 4.0806vw, 6.2305rem);
+}
+
+h1 {
+    font-size: var(--fs-3);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: var(--spacing-6);
+}
+
+h2 {
+    font-size: var(--fs-2);
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-3);
+}
+
+h3 {
+    font-size: var(--fs-0);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-2);
+}
+
+h4 {
+    font-size: var(--fs-sec-1);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: var(--spacing-2);
+}
+
+p {
+    font-size: var(--fs-0);
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-1);
+}
+
+a {
+    font-size: var(--fs-sec-1);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.primary-txt {
+    font-size: var(--fs-sec-2);
+    font-weight: 200;
+    font-style: italic;
+    color: #be3144;
+}
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+section {
+    padding: calc(var(--spacing-8) * 1.5) calc(var(--spacing-8) * 2);
+}
+
+/* header */
+
+body>header {
+    background-color: #be3144;
+    padding: var(--spacing-2) var(--spacing-6);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 99;
+}
+
+nav#navbar ul {
+    gap: var(--spacing-4);
+    justify-content: flex-end;
+}
+
+nav#navbar a {
+    transition: 200ms ease-in-out;
+}
+
+nav#navbar a:hover {
+    color: black;
+}
+
+
+/* #welcome-section */
+
+#welcome-section {
+    height: 100vh;
+    background: linear-gradient(-45deg, #111113, #414143 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 var(--spacing-4);
+}
+
+#welcome-section h1 {
+    margin: 0;
+}
+
+
+/* #projects */
+
+#projects {
+    background-color: #45567d;
+}
+
+#projects-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-4);
+    margin: var(--spacing-8) 0;
+}
+
+#projects-showcase article {
+    width: 30%;
+    border: 1px solid white;
+    border-radius: 6px;
+    transition: 300ms ease-in-out;
+}
+
+#projects-showcase article:hover {
+    background-color: #be3144;
+    border: 1px solid #be3144;
+}
+
+#projects-showcase article:hover h3 {
+    color: white;
+}
+
+#projects-showcase article:hover h3::before {
+    color: white;
+    content: "< ";
+    position: absolute;
+    vertical-align: middle;
+    transform: translateX(calc(var(--spacing--1) * -3));
+
+}
+
+#projects-showcase article:hover h3::after {
+    color: white;
+    content: " />";
+    position: absolute;
+    vertical-align: middle;
+    transform: translateX(var(--spacing--1));
+}
+
+#projects-showcase a {
+    display: block;
+    text-decoration: none;
+}
+
+#projects-showcase img {
+    width: 100%;
+    border-radius: 6px 6px 0 0;
+    height: clamp(18.75rem, 17.5rem + 6.25vw, 25rem);
+    object-fit: cover;
+}
+
+#projects-showcase h3 {
+    padding: var(--spacing-2) 0;
+    position: relative;
+}
+
+#profile-link {
+    width: fit-content;
+    background-color: #be3144;
+    margin: auto;
+    margin-top: var(--spacing-8);
+    padding: var(--spacing-2) var(--spacing-6);
+    text-decoration: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 200ms ease-in-out;
+}
+
+#profile-link:hover {
+    background-color: #ae2134;
+}
+
+
+/* footer */
+
+footer {
+    background-color: #111113;
+    padding: calc(var(--spacing-8) * 1.5) var(--spacing-8) var(--spacing-4) var(--spacing-8);
+}
+
+footer .caption {
+    font-style: italic;
+    font-weight: 200;
+    margin-top: calc(-1 * var(--spacing-3));
+}
+
+#socials-navbar {
+    margin-top: var(--spacing-8);
+}
+
+#socials-navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: var(--spacing-4);
+    row-gap: var(--spacing-2);
+}
+
+#socials-navbar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-0);
+}
+
+#socials-navbar li span {
+    display: inline-block;
+    font-size: var(--fs-1);
+    text-wrap: nowrap;
+}
+
+#socials-navbar svg {
+    width: var(--spacing-4);
+    height: var(--spacing-4);
+}
+
+.footnote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: var(--spacing-8);
+    padding-top: var(--spacing-4);
+    border-top: var(--spacing--2) solid #ae2134;
+}
+
+.footnote p:last-of-type {
+    font-size: var(--fs-sec-0);
+    font-weight: 200;
+}
+
+
+/* media quaries */
+
+@media only screen and (max-width: 1400px) {
+    #projects-showcase article {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #projects-showcase article {
+        width: 100%;
+    }
+}
